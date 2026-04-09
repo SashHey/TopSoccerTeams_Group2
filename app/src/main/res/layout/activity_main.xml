@@ -5,15 +5,31 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/soccer_img"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/headingId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:fontFamily="casual"
+        android:text="Top South African Teams"
+        android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.085" />
+
+    <TextView
+        android:id="@+id/teamsDisplayId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Teams:"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="129dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
