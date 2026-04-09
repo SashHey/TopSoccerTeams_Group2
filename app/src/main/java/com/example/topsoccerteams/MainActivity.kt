@@ -20,11 +20,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val teamsTxt = findViewById<TextView>(R.id.teamsDisplayId)
+        var teamsDisplay = ""
+        var count = 0
 
-        //ureassigning position 0 of the teams array
+        //reassigning position 0 of the teams array
         teams[0] = "Mam Sundowns FC :)"
+
+        //while loop to iterate through the teams array and display them
+        while(count < teams.count()){
+            teamsDisplay += "${teams[count]}\n"
+            count++
+        }
+
         //displaying top 5 soccer teams in text view on UI
-        teamsTxt.text = Arrays.toString(teams)
+        teamsTxt.text = teamsDisplay
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
