@@ -10,8 +10,15 @@ import androidx.core.view.WindowInsetsCompat
 import java.util.Arrays
 
     //created function to display array values in terminal
-    fun logArrValues(arr: Array<String>){
-        Log.v("Array values: ", Arrays.toString(arr))
+    fun logArrValues(arr: Array<String>, limit: Int = 0){
+        //if statement to check if there is a limit - if there is a limit, cut the array at that index
+        if (limit == 0){
+            Log.v("Array values: ", Arrays.toString(arr))
+        }
+        else
+        {
+            Log.v("Array values: ", Arrays.toString(arr.sliceArray(0..limit - 1)))
+        }
     }
 
 class MainActivity : AppCompatActivity() {
